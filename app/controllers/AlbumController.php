@@ -21,7 +21,7 @@ class AlbumController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('albums.create');
 	}
 
 
@@ -32,7 +32,15 @@ class AlbumController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$title = Input::get('title');
+		$autor = Input::get('autor');
+
+		Album::create(array(
+			'title' => $title,
+			'autor' => $autor
+			));
+
+		return Redirect::route('album.index');
 	}
 
 
