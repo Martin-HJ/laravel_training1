@@ -38,7 +38,7 @@ class AlbumController extends \BaseController {
 		Album::create(array(
 			'title' => $title,
 			'autor' => $autor
-			));
+		));
 
 		return Redirect::route('album.index');
 	}
