@@ -9,8 +9,8 @@ class AlbumController extends \BaseController {
 	 */
 	public function index()
 	{
-		$name = 'Martin';
-		return View::make('albums.index', compact('name'));
+		$albums = Album::all();
+		return View::make('albums.index', compact('albums'));
 	}
 
 
